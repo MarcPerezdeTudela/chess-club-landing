@@ -23,12 +23,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background: ${(props) => props.theme.gradients.bodyBackground};
-  height: 200vh;
+  min-height: 100vh;
 `
 const Header = styled.header`
   position: absolute;
   width: 100%;
   top: 0;
+  left: 0;
 `
 
 const Body = styled.main`

@@ -3,6 +3,7 @@ import { spaces } from './spaces'
 import { fonts } from './fonts'
 import { fontSizes } from './fontSizes'
 import { gradients } from './gradients'
+import { shadows } from './shadows'
 
 const theme = {
   colors,
@@ -10,6 +11,7 @@ const theme = {
   fonts,
   fontSizes,
   gradients,
+  shadows,
 }
 
 export { theme }

@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   white: '#F3F2F1',
   grey: '#BFBFBF',
   lightGrey: '#D9D9D9',
@@ -7,5 +7,3 @@ const colors = {
   primaryLigth: '#172645',
   secondary: '#FFCC5C',
 }
-
-export { colors }

@@ -1,4 +1,4 @@
-const fontSizes = {
+export const fontSizes = {
   h1: '48.83px',
   h2: '39.06px',
   h3: '31.25px',
@@ -7,5 +7,3 @@ const fontSizes = {
   text: '16px',
   subText: '12.5px',
 }
-
-export { fontSizes }

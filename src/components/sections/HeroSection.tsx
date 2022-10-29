@@ -28,12 +28,13 @@ export const HeroSection = () => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.section`
   position: relative;
   height: 680px;
   width: 100%;
 `
 const ImageContainer = styled.div`
+  position: relative;
   height: 100%;
   width: 100%;
   -webkit-mask-image: ${({ theme }) => theme.gradients.heroImage};
@@ -62,6 +63,7 @@ const SubTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.h2};
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.secondary};
+  max-width: 280px;
   text-align: center;
 `
 

@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import Headroom from 'react-headroom'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export const Navbar = () => {
+  const [blurBackground, setBlurBackground] = useState(false)
+
   return (
-    <Headroom>
-      <NavBar>
+    <Headroom
+      onUnfix={() => setBlurBackground(false)}
+      onPin={() => setBlurBackground(true)}
+      onUnpin={() => setBlurBackground(false)}
+    >
+      <NavBar showBackground={blurBackground}>
         <LogoContainer>
           <Image
             alt="logo"
@@ -25,12 +31,17 @@ export const Navbar = () => {
   )
 }
 
-const NavBar = styled.nav`
+const NavBar = styled.nav<{ showBackground: boolean }>`
   display: flex;
   height: 90px;
   align-items: center;
   justify-content: space-between;
   padding: 0px ${({ theme }) => theme.spaces.m};
+  background-color: ${(props) =>
+    props.showBackground
+      ? ({ theme }) => theme.colors.primaryDark
+      : 'transparent'};
+  transition: background-color 0.5s linear;
 `
 const LogoText = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.subText};

@@ -67,10 +67,10 @@ const Separator = styled.hr`
 const Description = styled.p`
   margin-top: ${({ theme }) => theme.spaces.s};
   margin-bottom: ${({ theme }) => theme.spaces.s};
-  color: ${({ theme }) => theme.colors.lightGrey};
+  color: ${({ theme }) => theme.colors.gray};
   font-size: ${({ theme }) => theme.fontSizes.text};
   font-family: ${({ theme }) => theme.fonts.primary};
   line-height: 26px;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
 `

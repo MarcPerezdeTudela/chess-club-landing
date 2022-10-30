@@ -8,7 +8,8 @@
       "@/styles/*": ["src/styles/*"],
       "@/providers/*": ["src/providers/*"],
       "@/layouts/*": ["src/layouts/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@/types/*": ["src/types/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -24,6 +25,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "theme.d.ts"],
   "exclude": ["node_modules"]
 }

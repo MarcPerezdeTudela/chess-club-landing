@@ -47,10 +47,11 @@ const Container = styled.section`
   align-items: center;
   gap: ${({ theme }) => theme.spaces.m};
   padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.m};
+  padding-bottom: ${({ theme }) => theme.spaces.l};
 `
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.text};
-  color: ${({ theme }) => theme.colors.lightGrey};
+  color: ${({ theme }) => theme.colors.lightGray};
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.primary};
   line-height: 26px;

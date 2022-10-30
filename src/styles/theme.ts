@@ -5,7 +5,7 @@ import { fontSizes } from './fontSizes'
 import { gradients } from './gradients'
 import { shadows } from './shadows'
 
-const theme = {
+export const theme = {
   colors,
   spaces,
   fonts,
@@ -13,5 +13,3 @@ const theme = {
   gradients,
   shadows,
 }
-
-export { theme }

@@ -43,13 +43,13 @@ export const NumbersSection = () => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spaces.m};
   align-items: center;
   padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.m};
-  padding-bottom: ${({ theme }) => theme.spaces.xl};
+  padding-bottom: ${({ theme }) => theme.spaces.l};
 `
 
 const SectionSubTitle = styled.h4`

@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <Title>Chess Club</Title>
         <SubTitle>Play chess with real people</SubTitle>
         <ButtonContainer>
-          <PrimaryButton text="Sign Up" />
+          <PrimaryButton text="Subscribe" />
           <SecondaryButton text="Contact" />
         </ButtonContainer>
       </Content>

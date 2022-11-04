@@ -10,6 +10,7 @@ export const HeroSection = () => {
     <Container>
       <ImageContainer>
         <Image
+          priority
           alt={'heroSection'}
           src={HeroImage}
           layout={'fill'}

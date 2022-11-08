@@ -13,28 +13,28 @@ export const NumbersSection = () => {
         <NumbersItem
           Icon={FaUserAlt}
           iconSize={64}
-          number={100}
+          number={200}
           title="Active Members"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaTrophy}
           iconSize={72}
-          number={3}
+          number={12}
           title="Weekly Tournaments"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaGraduationCap}
           iconSize={72}
-          number={8}
+          number={18}
           title="Monthly Classes"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaCrown}
           iconSize={72}
-          number={10}
+          number={20}
           title="Titled Players"
           description="Lorem ipsum dolor sit amet, consectetur"
         />

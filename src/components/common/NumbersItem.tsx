@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled, { useTheme } from 'styled-components'
 import { IconType } from 'react-icons'
 import { ThemeInterface } from '@/types/theme'
+import { animate, motion, useAnimationControls, useInView } from 'framer-motion'
 
 interface Props {
   number: number
@@ -18,18 +19,41 @@ export const NumbersItem = ({
   description,
 }: Props) => {
   const theme = useTheme() as ThemeInterface
+  const containerRef = useRef(null)
+  const containerInView = useInView(containerRef, { once: true, amount: 0.3 })
+  const containerControls = useAnimationControls()
+  const numberRef = useRef<HTMLSpanElement | null>(null)
+  const numberInView = useInView(numberRef, { once: true, amount: 0.5 })
+
+  useEffect(() => {
+    if (containerInView) void containerControls.start({ opacity: 1, y: 0 })
+    if (numberInView) {
+      animate(0, number, {
+        duration: 1,
+        onUpdate: (v) => {
+          const node = numberRef.current
+          if (node !== null) node.textContent = `+${v.toFixed(0)}`
+        },
+      })
+    }
+  })
 
   return (
-    <Container>
+    <Container
+      initial={{ opacity: 0, y: 40 }}
+      transition={{ duration: 0.5 }}
+      animate={containerControls}
+      ref={containerRef}
+    >
       <Icon size={iconSize} fill={theme.colors.secondary} />
-      <Number>+{number}</Number>
+      <Number ref={numberRef}>+{number}</Number>
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Container>
   )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spaces.xs};

@@ -38,6 +38,7 @@ const ImageContainer = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   -webkit-mask-image: ${({ theme }) => theme.gradients.heroImage};
   mask-image: ${({ theme }) => theme.gradients.heroImage};
 `

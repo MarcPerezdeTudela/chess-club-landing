@@ -19,4 +19,5 @@ const Button = styled.button`
   color: ${({ theme }) => theme.colors.primaryDark};
   padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.s};
   box-shadow: ${({ theme }) => theme.shadows.primaryButton};
+  cursor: pointer;
 `

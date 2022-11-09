@@ -19,4 +19,5 @@ const Button = styled.button`
   background-color: transparent;
   color: ${({ theme }) => theme.colors.secondary};
   padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.s};
+  cursor: pointer;
 `

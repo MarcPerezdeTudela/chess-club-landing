@@ -1,4 +1,4 @@
 export const fonts = {
-  primary: 'Proxima Nova',
-  secondary: 'Brandon Grotesque',
+  primary: 'proxima-nova, sans-serif',
+  secondary: 'brandon-grotesque, sans-serif',
 }

@@ -1,9 +1,9 @@
 export const fontSizes = {
-  h1: '48.83px',
-  h2: '39.06px',
-  h3: '31.25px',
-  h4: '25px',
-  h5: '20px',
-  text: '16px',
-  subText: '12.5px',
+  h1: '3.052rem',
+  h2: '2.4416rem',
+  h3: '1.953rem',
+  h4: '1.563rem',
+  h5: '1.25rem',
+  text: '1rem',
+  subText: '0.75rem',
 }

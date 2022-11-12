@@ -33,4 +33,5 @@ const Header = styled.header`
 
 const Body = styled.main`
   flex-grow: 1;
+  padding-bottom: ${(props) => props.theme.spaces.xl};
 `

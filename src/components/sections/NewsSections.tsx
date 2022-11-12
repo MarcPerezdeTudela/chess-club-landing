@@ -10,7 +10,7 @@ export const NewsSections = () => {
   return (
     <Container>
       <SectionTitle text="Latest Posts" />
-      <NewsList>
+      <NewsGrid>
         <NewItem
           title="Strategy in chess"
           author={'John Doe'}
@@ -29,7 +29,7 @@ export const NewsSections = () => {
           date={'Aug 12 2022'}
           coverImage={PostImage3}
         />
-      </NewsList>
+      </NewsGrid>
     </Container>
   )
 }
@@ -38,14 +38,16 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spaces.l};
-  align-content: center;
-  padding-bottom: ${({ theme }) => theme.spaces.l};
+  align-items: center;
 `
 
-const NewsList = styled.div`
+const NewsGrid = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: ${({ theme }) => theme.spaces.m};
+  padding-right: ${({ theme }) => theme.spaces.m};
   gap: ${({ theme }) => theme.spaces.l};
   align-items: center;
-  padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.m};
 `

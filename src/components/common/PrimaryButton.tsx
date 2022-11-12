@@ -9,10 +9,10 @@ export const PrimaryButton = ({ text }: Props) => {
 }
 
 const Button = styled.button`
-  height: 42px;
-  width: 140px;
+  height: 3em;
+  width: 8.5em;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   font-size: ${({ theme }) => theme.fontSizes.text};
   font-family: ${({ theme }) => theme.fonts.primary};
   background-color: ${({ theme }) => theme.colors.secondary};

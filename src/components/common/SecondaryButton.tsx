@@ -10,10 +10,10 @@ export const SecondaryButton = ({ text }: Props) => {
 }
 
 const Button = styled.button`
-  height: 42px;
-  width: 140px;
+  height: 3em;
+  width: 8.5em;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-  border-radius: 5px;
+  border-radius: 0.3125em;
   font-size: ${({ theme }) => theme.fontSizes.text};
   font-family: ${({ theme }) => theme.fonts.primary};
   background-color: transparent;

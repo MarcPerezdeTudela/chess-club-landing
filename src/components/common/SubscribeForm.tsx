@@ -20,20 +20,21 @@ export const SubscribeForm = () => {
       validateOnBlur={false}
       onSubmit={(values, { resetForm }) => {
         void confetti({
-          particleCount: 100,
+          particleCount: 200,
           spread: 70,
           origin: { y: 0.6 },
         })
         toast.success('Successfully subscribed', {
           position: 'bottom-center',
           style: {
-            backgroundColor: theme.colors.primaryLight,
-            color: theme.colors.white,
+            backgroundColor: theme.colors.secondary,
+            color: theme.colors.primaryDark,
             fontFamily: theme.fonts.primary,
+            fontSize: theme.fontSizes.h5,
           },
           iconTheme: {
-            primary: theme.colors.secondary,
-            secondary: theme.colors.primaryDark,
+            primary: theme.colors.primaryDark,
+            secondary: theme.colors.secondary,
           },
           duration: 3000,
         })
@@ -42,36 +43,33 @@ export const SubscribeForm = () => {
       }}
     >
       {({ errors }) => (
-        <EmailForm>
+        <FormContainer>
           <EmailBar>
             <EmailInput name="email" placeholder="Your email" />
             <Button type="submit">Subscribe</Button>
           </EmailBar>
           <ErrorMessage>{errors.email}</ErrorMessage>
-        </EmailForm>
+        </FormContainer>
       )}
     </Formik>
   )
 }
 
-const EmailForm = styled(Form)`
-  width: 100%;
-  max-width: 420px;
+const FormContainer = styled(Form)`
   display: flex;
+  width: 100%;
+  max-width: 30rem;
   flex-direction: column;
   justify-content: center;
   gap: ${({ theme }) => theme.spaces.xs};
 `
 const EmailBar = styled.div`
-  width: 100%;
-  max-width: 420px;
   display: flex;
   justify-content: center;
+  align-items: center;
 `
-
 const ErrorMessage = styled.span`
-  width: 100%;
-  max-width: 420px;
+  max-width: 26.25em;
   color: tomato;
   height: ${({ theme }) => theme.fontSizes.text};
   padding: 0 ${({ theme }) => theme.spaces.xs};
@@ -79,15 +77,16 @@ const ErrorMessage = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.text};
 `
 const EmailInput = styled(Field)`
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   padding: 0 ${({ theme }) => theme.spaces.xs};
-  flex-grow: 1;
-  height: 42px;
+
+  height: 3em;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-size: ${({ theme }) => theme.fontSizes.text};
   color: ${({ theme }) => theme.colors.primaryDark};
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-  border-radius: 5px 0 0 5px;
+  border-radius: 0.3125em 0 0 0.3125em;
 
   &:focus {
     outline: none !important;
@@ -95,14 +94,14 @@ const EmailInput = styled(Field)`
   }
 `
 const Button = styled.button`
-  height: 42px;
+  height: 3em;
   border: none;
   font-size: ${({ theme }) => theme.fontSizes.text};
   font-family: ${({ theme }) => theme.fonts.primary};
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primaryDark};
-  padding: ${({ theme }) => theme.spaces.xs};
-  border-radius: 0 5px 5px 0;
+  padding: ${({ theme }) => theme.spaces.xs} ${({ theme }) => theme.spaces.s};
+  border-radius: 0 0.3125em 0.3125em 0;
   &:hover {
     cursor: pointer;
   }

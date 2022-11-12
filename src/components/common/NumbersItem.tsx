@@ -9,15 +9,8 @@ interface Props {
   title: string
   description: string
   Icon: IconType
-  iconSize: number
 }
-export const NumbersItem = ({
-  Icon,
-  iconSize,
-  number,
-  title,
-  description,
-}: Props) => {
+export const NumbersItem = ({ Icon, number, title, description }: Props) => {
   const theme = useTheme() as ThemeInterface
   const containerRef = useRef(null)
   const containerInView = useInView(containerRef, { once: true, amount: 0.3 })
@@ -45,7 +38,9 @@ export const NumbersItem = ({
       animate={containerControls}
       ref={containerRef}
     >
-      <Icon size={iconSize} fill={theme.colors.secondary} />
+      <IconContainer>
+        <Icon size={'100%'} fill={theme.colors.secondary} />
+      </IconContainer>
       <Number ref={numberRef}>+{number}</Number>
       <Title>{title}</Title>
       <Description>{description}</Description>
@@ -59,11 +54,18 @@ const Container = styled(motion.div)`
   gap: ${({ theme }) => theme.spaces.xs};
   align-items: center;
 `
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6em;
+  width: 6em;
+`
 
 const Number = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.h2};
   font-weight: 450;
-  line-height: 56px;
+  line-height: 2em;
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.secondary};
 `
@@ -71,7 +73,7 @@ const Number = styled.span`
 const Title = styled.h4`
   font-size: ${({ theme }) => theme.fontSizes.h4};
   font-weight: 340;
-  line-height: 40px;
+  line-height: 1.25em;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.secondary};
   text-align: center;
@@ -81,9 +83,9 @@ const Description = styled.p`
   margin-top: ${({ theme }) => theme.spaces.s};
   font-size: ${({ theme }) => theme.fontSizes.text};
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5em;
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.fonts.primary};
   text-align: center;
-  max-width: 220px;
+  max-width: 20ch;
 `

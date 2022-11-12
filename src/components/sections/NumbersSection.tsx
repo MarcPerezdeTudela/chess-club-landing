@@ -12,28 +12,24 @@ export const NumbersSection = () => {
       <NumbersContainer>
         <NumbersItem
           Icon={FaUserAlt}
-          iconSize={64}
           number={200}
           title="Active Members"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaTrophy}
-          iconSize={72}
           number={12}
           title="Weekly Tournaments"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaGraduationCap}
-          iconSize={72}
           number={18}
           title="Monthly Classes"
           description="Lorem ipsum dolor sit amet, consectetur"
         />
         <NumbersItem
           Icon={FaCrown}
-          iconSize={72}
           number={20}
           title="Titled Players"
           description="Lorem ipsum dolor sit amet, consectetur"
@@ -54,18 +50,19 @@ const Container = styled.section`
 
 const SectionSubTitle = styled.h4`
   font-size: ${({ theme }) => theme.fontSizes.h4};
+  max-width: 20ch;
   font-weight: 340;
-  line-height: 40px;
+  line-height: 1.25em;
   color: ${({ theme }) => theme.colors.lightGray};
   font-family: ${({ theme }) => theme.fonts.secondary};
-  padding: 0 ${({ theme }) => theme.spaces.m};
   text-align: center;
 `
 
 const NumbersContainer = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: ${({ theme }) => theme.spaces.l};
-  align-items: center;
   padding-top: ${({ theme }) => theme.spaces.m};
 `

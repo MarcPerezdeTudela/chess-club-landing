@@ -23,14 +23,14 @@ const SectionTitleContainer = styled.div`
 const Title = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.h3};
   font-weight: 330;
-  line-height: 48px;
+  line-height: 3em;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.secondary};
   text-align: center;
 `
 
 const Separator = styled.hr`
-  width: 94px;
+  width: 5.875em;
   height: 1px;
   color: ${({ theme }) => theme.colors.secondary};
   background-color: ${({ theme }) => theme.colors.secondary};

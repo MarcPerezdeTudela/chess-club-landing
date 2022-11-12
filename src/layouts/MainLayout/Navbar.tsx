@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import Headroom from 'react-headroom'
 import { AiOutlineMenu } from 'react-icons/ai'
+import ChessLogo from '@/public/images/chessLogo.svg'
 
 export const Navbar = () => {
   const [blurBackground, setBlurBackground] = useState(false)
@@ -15,12 +16,14 @@ export const Navbar = () => {
     >
       <NavBar showBackground={blurBackground}>
         <LogoContainer>
-          <Image
-            alt="logo"
-            src={'/images/chessLogo.svg'}
-            width={42}
-            height={42}
-          />
+          <LogoImageContainer>
+            <Image
+              alt="logo"
+              src={ChessLogo}
+              layout={'fill'}
+              objectFit={'cover'}
+            />
+          </LogoImageContainer>
           <LogoText>
             Chess Club <br /> We Love Chess
           </LogoText>
@@ -33,10 +36,9 @@ export const Navbar = () => {
 
 const NavBar = styled.nav<{ showBackground: boolean }>`
   display: flex;
-  height: 90px;
   align-items: center;
   justify-content: space-between;
-  padding: 0px ${({ theme }) => theme.spaces.m};
+  padding: ${({ theme }) => theme.spaces.s} ${({ theme }) => theme.spaces.s};
   background-color: ${(props) =>
     props.showBackground
       ? ({ theme }) => theme.colors.primaryDark
@@ -49,6 +51,11 @@ const LogoText = styled.span`
   opacity: 0.6;
   font-family: ${({ theme }) => theme.fonts.primary};
 `
+const LogoImageContainer = styled.div`
+  position: relative;
+  height: 3em;
+  width: 3em;
+`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
@@ -56,7 +63,7 @@ const LogoContainer = styled.div`
 `
 const MenuIcon = styled(AiOutlineMenu)`
   fill: ${({ theme }) => theme.colors.white};
-  height: 32px;
-  width: 32px;
+  height: 2em;
+  width: 2em;
   cursor: pointer;
 `

@@ -8,28 +8,42 @@ export const Footer = () => {
   return (
     <Container>
       <SocialMedia>
-        <FaFacebook size={36} fill={theme.colors.secondary} />
-        <FaTwitter size={36} fill={theme.colors.secondary} />
-        <FaLinkedinIn size={36} fill={theme.colors.secondary} />
-        <FaTelegram size={36} fill={theme.colors.secondary} />
+        <Icon>
+          <FaFacebook size={'100%'} fill={theme.colors.secondary} />
+        </Icon>
+        <Icon>
+          <FaTwitter size={'100%'} fill={theme.colors.secondary} />
+        </Icon>
+        <Icon>
+          <FaLinkedinIn size={'100%'} fill={theme.colors.secondary} />
+        </Icon>
+        <Icon>
+          <FaTelegram size={'100%'} fill={theme.colors.secondary} />
+        </Icon>
       </SocialMedia>
     </Container>
   )
 }
 
 const Container = styled.footer`
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.primaryDark};
+  padding: ${({ theme }) => theme.spaces.s};
 `
 const SocialMedia = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: ${({ theme }) => theme.spaces.m};
 
   & > * {
     cursor: pointer;
   }
+`
+const Icon = styled.div`
+  display: flex;
+  width: 2em;
+  height: 2em;
 `

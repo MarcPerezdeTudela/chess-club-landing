@@ -51,6 +51,7 @@ const Container = styled.article`
   background-color: ${({ theme }) => theme.colors.primaryDark};
   filter: ${({ theme }) => theme.shadows.cardShadow};
   padding: ${({ theme }) => theme.spaces.s};
+  padding-bottom: ${({ theme }) => theme.spaces.l};
   gap: ${({ theme }) => theme.spaces.s};
   cursor: pointer;
 

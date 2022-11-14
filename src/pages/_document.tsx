@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <link
-          rel="stylesheet"
+          rel="preload"
           href="https://use.typekit.net/iqq6mfi.css"
           as="font"
         />

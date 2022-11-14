@@ -37,6 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 HeroSection: https://unsplash.com/es/fotos/nEbMedmVwgw
 
-News: https://unsplash.com/es/fotos/h1ShPXfHbTw
-https://unsplash.com/es/fotos/oVWilf8znF8
-https://unsplash.com/es/fotos/7VGzV09YnvA
+News: -https://unsplash.com/es/fotos/h1ShPXfHbTw -https://unsplash.com/es/fotos/oVWilf8znF8 -https://unsplash.com/es/fotos/7VGzV09YnvA

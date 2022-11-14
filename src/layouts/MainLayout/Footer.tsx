@@ -35,6 +35,7 @@ const Container = styled.footer`
 const SocialMedia = styled.div`
   display: flex;
   width: 100%;
+  max-width: 30em;
   justify-content: center;
   gap: ${({ theme }) => theme.spaces.m};
 
